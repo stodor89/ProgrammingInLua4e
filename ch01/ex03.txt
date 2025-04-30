@@ -1,0 +1,2 @@
+Q: Can you name other languages that use "--" for comments?
+A: Not from memory. According to Wikipedia, these do: Euphoria, Haskell, SQL, Ada, AppleScript, Eiffel, Lua, VHDL, SGML, PureScript, Elm

@@ -1,0 +1,4 @@
+Q: Are parens necessary? Do you recommend their use in this expression:
+	> (x and y and (not z)) or ((not y) and x)
+
+A: They aren't necessary here, but IMO they make the code more readable.

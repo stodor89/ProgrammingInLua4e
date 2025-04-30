@@ -1,0 +1,4 @@
+This code:
+	> type(nil) == nil
+returns the bool value "false", because type() returns the string "nil",
+and "nil" is not equal to the nil value.

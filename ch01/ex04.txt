@@ -1,0 +1,6 @@
+Valid names: ___, _end, End, NULL
+Invalid:
+- end -> keyword
+- until -> keyword + unallowed symbol (?)
+- nil -> keyword
+- one-step -> unallowed symbol (-)

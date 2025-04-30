@@ -1,0 +1,3 @@
+Q: How can you check (without using type()) that a value is bool?
+A: I can think of this:
+	> not (not x) == x
