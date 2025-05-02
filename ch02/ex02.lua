@@ -37,9 +37,9 @@ function swap(a, x, y)
 	a[y] = temp
 end
 
--- Function to generate permutations
+-- generate all permutations (Heap's algorithm)
 function permute(a, n)
-	if n == 0 then -- check board and print it if it's ok
+	if n == 0 then -- check resulting board and print if ok
 		if (checkDiagonals(a)) then
 			printSolution(a)
 		end
@@ -52,7 +52,7 @@ function permute(a, n)
 	end
 end
 
--- Generate array and call permute
+-- generate array and call permute
 a = {}
 for i = 1, N do
 	a[i] = i
