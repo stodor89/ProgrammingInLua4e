@@ -39,17 +39,17 @@ end
 
 -- Function to generate permutations
 function permute(a, n)
-    if n == 0 then -- check board and print it if it's ok
+	if n == 0 then -- check board and print it if it's ok
 		if (checkDiagonals(a)) then
 			printSolution(a)
 		end
-    else
-        for i = 1, n do -- for each number from 1 to n
-            swap(a, i, n)  -- swap it with the number in n-th position
-            permute(a, n - 1) -- handle numbers from 1 to n-1
-            swap(a, i, n)  -- restore before trying next i
-        end
-    end
+	else
+		for i = 1, n do -- for each number from 1 to n
+			swap(a, i, n)  -- swap it with the number in n-th position
+			permute(a, n - 1) -- handle numbers from 1 to n-1
+			swap(a, i, n)  -- restore before trying next i
+		end
+	end
 end
 
 -- Generate array and call permute
