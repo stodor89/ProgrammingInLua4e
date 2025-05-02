@@ -1,0 +1,20 @@
+> math.maxinteger * 2 --> -2
+	integer overflow
+	(01111... << 1) --> 111...110 --> -2
+
+> math.mininteger * 2 --> 0
+	integer underflow
+	(10000000... * 2) --> truncate --> 0
+
+> math.maxinteger * math.maxinteger --> 1
+	integer overflow
+	(2^63 - 1)^2 --> 2^126 - 2^63 * 2 + 1
+	2^126 % (math.maxinteger + 1) --> 0
+	-2^63 * 2 --> truncate --> 0
+
+> math.mininteger * math.mininteger --> 0
+	integer overflow
+	-2^63 * -2^63 == 2^126
+	2^126 % (math.maxinteger + 1) == 0
+
+It's interesting that we get such innocent numbers!

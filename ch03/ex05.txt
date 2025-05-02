@@ -1,0 +1,7 @@
+12/7 --> 127/10 --> hmm
+The number 127 is prime (no factors), so I don't
+think we can get rid of that factor of 5 in the
+denominator. So... no.
+
+
+5.5 --> 55 / 10 --> 110/20 --> 22/4

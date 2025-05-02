@@ -1,0 +1,12 @@
+Valid numbers: .0e12, 0x12, 0xA, 0xFFFFFFFF,
+	0x1P10, 0.1e1, 0x0.1p1
+
+Invalid numbers:
+e.12 --> no number, only exponent
+0.0e --> no exponent, only number and e
+0xABFG --> G is not a valid hex digit
+FFFF --> F is not a valid decimal digit
+0x --> hex prefix without a number
+0x1P10 --> 
+
+

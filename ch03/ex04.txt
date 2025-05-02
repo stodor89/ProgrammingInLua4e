@@ -1,0 +1,18 @@
+> 2^3^4
+2.4178516392293e+24
+> 2^(3^4)
+2.4178516392293e+24
+> (2^3)^4
+4096.0
+
+This implies that operator ^ is right-associative.
+
+> 2^-3^4
+4.1359030627651e-25
+> (2^-3)^4
+0.000244140625
+> 2^(-3^4)
+4.1359030627651e-25
+
+
+This implies that ^ has higher precedence than unary -.
