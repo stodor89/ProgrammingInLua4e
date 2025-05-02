@@ -1,6 +1,8 @@
 --[[
 random number on a normal distribution
 
+This algorithm is called "Box-Muller transform"
+
 By default, the mean is 0, and the standard deviation
 is 1. If that doesn't suit your needs:
 1. multiply result by desired standard deviation
