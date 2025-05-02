@@ -3,11 +3,12 @@ N = 8 -- board size
 -- check the diagonals of a board
 -- a is a sequence of positions, e.g.
 -- {3,7,2,1,8,6,5,4} means positions (1,3), (2,7), (3,2), (4,1), etc.
-function checkdiagonals(a)
+function checkDiagonals(a)
 	for i = 2, N do -- for every queen after the first
 		for j = 1, i - 1 do -- for every previous queen
 			if (a[i] - i == a[j] - j) or -- check \ diagonal
-				(a[i] + i == a[j] + j) then -- check / diagonal
+				(a[i] + i == a[j] + j) -- check / diagonal
+			then
 				return false
 			end
 		end
@@ -16,7 +17,7 @@ function checkdiagonals(a)
 end
 
 -- print a board
-function printsolution(a)
+function printSolution(a)
 	for i = 1, N do -- for each row
 		for j = 1, N do -- for each column
 			-- write "X" or "-" plus a space
@@ -39,8 +40,8 @@ end
 -- Function to generate permutations
 function permute(a, n)
     if n == 0 then -- check board and print it if it's ok
-		if (checkdiagonals(a)) then
-			printsolution(a)
+		if (checkDiagonals(a)) then
+			printSolution(a)
 		end
     else
         for i = 1, n do -- for each number from 1 to n

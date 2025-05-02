@@ -1,12 +1,12 @@
 N = 8 -- board size
 
--- isplaceok_calls = 0
+-- isPlaceOk_calls = 0
 
 -- check whether position (n, c) is free from attacks
 -- a is a sequence of positions, e.g.
 -- {3,7,2,1,8,6,5,4} means positions (1,3), (2,7), (3,2), (4,1), etc.
-function isplaceok(a, n, c)
-	-- isplaceok_calls = isplaceok_calls + 1
+function isPlaceOk(a, n, c)
+	-- isPlaceOk_calls = isPlaceOk_calls + 1
 	for i = 1, n - 1 do -- for each queen already placed
 		if (a[i] == c) or -- same column
 			(a[i] - i == c - n) or -- same diagonal
@@ -18,7 +18,7 @@ function isplaceok(a, n, c)
 end
 
 -- print a board
-function printsolution(a)
+function printSolution(a)
 	for i = 1, N do -- for each row
 		for j = 1, N do -- for each column
 			-- write "X" or "-" plus a space
@@ -30,20 +30,20 @@ function printsolution(a)
 end
 
 -- add to board 'a' all queens from 'n' to 'N'
-function addqueen(a, n)
+function addQueen(a, n)
 	if n > N then -- all queens have been placed
-		printsolution(a)
+		printSolution(a)
 		-- os.exit() -- exit after first solution (exercise 1)
 	else -- place n-th queen
 		for c = 1, N do
-			if (isplaceok(a, n, c)) then
+			if (isPlaceOk(a, n, c)) then
 				a[n] = c -- place n-th queen at column 'c'
-				addqueen(a, n + 1)
+				addQueen(a, n + 1)
 			end
 		end
 	end
 end
 
 -- run the program
-addqueen({}, 1)
--- print("calls to isplaceok: ", isplaceok_calls) -- 15720 for N = 8
+addQueen({}, 1)
+-- print("calls to isPlaceOk: ", isPlaceOk_calls) -- 15720 for N = 8
